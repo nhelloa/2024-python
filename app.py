@@ -2,14 +2,16 @@ clientes = []
 
 def cadastro_clientes():
     print('Cadastrar Clientes')
-    nome = input('Digite o nome do cliente: ')
-    email = input('Digite o email do cliente: ')
-    telefone = input('Digite o telefone do Cliente: ')
+    nome = input('Nome do Cliente: ')
+    email = input('Email do Cliente: ')
+    telefone = input('Telefone do Cliente: ')
+    endereço = input('Endereço do cliente')
     # Aqui você pode adicionar o código para cadastro de clientes
     cliente = {
         'nome': nome,
         'email': email,
         'telefone': telefone,
+        'endereço': endereço,
         'ativo': True
     }
 
@@ -22,7 +24,7 @@ def listar_clientes():
     if clientes:
         for idx, cliente in enumerate(clientes):
             status = 'Ativo' if cliente['ativo'] else 'Inativo'
-            print(f'{idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Status: {status}')
+            print(f' {idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Endereço: {endereço}')
     else:
         print('Nenhum cliente cadastrado.\n')
 
@@ -40,7 +42,7 @@ def ativar_cliente():
             else:
                 print('Cliente não encontrado!\n')
         except ValueError:
-            print('Entrada inválida! Por favor, insira um número válido.\n')
+            print('Entrada inválida! Por favor, inserir um número válido.\n')
 
 def sair_aplicacao():
      # Aqui você pode adicionar o código para encerrar a aplicação
@@ -50,7 +52,7 @@ def sair_aplicacao():
 def exibir_menu():
     print('''
       
-          Gelados Gourmet
+          X-SpOrT
           
           1. Cadastro de Clientes
           2. Listar Clientes
@@ -76,5 +78,4 @@ while True:
         else:
             print('Opção inválida! Por favor, escolha uma opção entre 1 e 4.')
     except ValueError:
-        print('Entrada inválida! Por favor, insira um número.')
-        
+        print('Entrada inválida! Por favor, inserir um número.')
