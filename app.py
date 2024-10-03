@@ -5,8 +5,8 @@ def cadastro_clientes():
     nome = input('Nome do Cliente: ')
     email = input('Email do Cliente: ')
     telefone = input('Telefone do Cliente: ')
-    endereço = input('Endereço do cliente')
-    # Aqui você pode adicionar o código para cadastro de clientes
+    endereço = input('Endereço do cliente: ')
+    # Adicionar o código para cadastro de clientes
     cliente = {
         'nome': nome,
         'email': email,
@@ -24,12 +24,12 @@ def listar_clientes():
     if clientes:
         for idx, cliente in enumerate(clientes):
             status = 'Ativo' if cliente['ativo'] else 'Inativo'
-            print(f' {idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Endereço: {endereço}')
+            print(f' {idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Endereço: {Endereço}')
     else:
         print('Nenhum cliente cadastrado.\n')
 
 def ativar_cliente():
-# Aqui você pode adicionar o código para ativar ou desativar clientes
+# Adicionar o código para ativar ou desativar clientes
     print('Ativar/Desativar Cliente')
     listar_clientes()
     if clientes:
@@ -42,17 +42,17 @@ def ativar_cliente():
             else:
                 print('Cliente não encontrado!\n')
         except ValueError:
-            print('Entrada inválida! Por favor, inserir um número válido.\n')
+            print('Entrada inválida! Por favor, inserir número válido.\n')
 
 def sair_aplicacao():
-     # Aqui você pode adicionar o código para encerrar a aplicação
+     # Adicionar o código para encerrar a aplicação
     print('Saindo da Aplicação')
     exit()
 
 def exibir_menu():
     print('''
       
-          X-SpOrT
+          X-SPORT
           
           1. Cadastro de Clientes
           2. Listar Clientes
@@ -74,8 +74,8 @@ while True:
             ativar_cliente()
         elif opcao_escolhida == 4:
             sair_aplicacao()
-            break  # Saí do loop para encerrar o programa
+            break  # Sair do loop para encerrar o programa
         else:
             print('Opção inválida! Por favor, escolha uma opção entre 1 e 4.')
     except ValueError:
-        print('Entrada inválida! Por favor, inserir um número.')
+        print('Entrada inválida! Por favor, inserir número válido.')
