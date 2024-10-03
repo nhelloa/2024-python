@@ -24,7 +24,7 @@ def listar_clientes():
     if clientes:
         for idx, cliente in enumerate(clientes):
             status = 'Ativo' if cliente['ativo'] else 'Inativo'
-            print(f' {idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Endereço: {Endereço}')
+            print(f' {idx + 1}. Nome: {cliente['nome']}, Email: {cliente['email']}, Telefone : {cliente['telefone']}, Status: {status}')
     else:
         print('Nenhum cliente cadastrado.\n')
 
